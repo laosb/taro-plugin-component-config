@@ -1,0 +1,23 @@
+{
+  "name": "taro-plugin-component-config",
+  "version": "0.1.2",
+  "description": "A Taro plugin to modify component config.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild --bundle --external:@tarojs/service --format=cjs --target=es6 --outfile=dist/index.js index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Shibo Lyu <github@of.sb>",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.14.25",
+    "typescript": "^4.6.2"
+  },
+  "peerDependencies": {
+    "@tarojs/service": "^3.3.0"
+  }
+}
